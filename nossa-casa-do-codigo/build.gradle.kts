@@ -6,7 +6,10 @@ plugins {
     id("org.jetbrains.kotlin.plugin.allopen") version "1.4.32"
     id("org.jetbrains.kotlin.plugin.jpa") version "1.4.32"
 }
-
+allOpen {
+    annotation("io.micronaut.http.annotation.Controller")
+    // annotations("com.another.Annotation", "com.third.Annotation")
+}
 
 version = "0.1"
 group = "br.com.zup"
