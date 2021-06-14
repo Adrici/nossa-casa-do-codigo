@@ -18,7 +18,9 @@ class AtualizaAutorController(val autorRepository: AutorRepository) {
         val autor = possivelAutor.get()
 
         autor.descricao = descricao
-        autorRepository.update(autor)
+        //autorRepository.update(autor)
+        //Podemos retirar essa linha porque o Hibernate já aplicou no banco de dados (genrenciada pelo JPA)
+        // a @Transactional já é responsável por fazer isso!
 
         return HttpResponse.ok(DetalhesDoAutorResponse(autor))
 
