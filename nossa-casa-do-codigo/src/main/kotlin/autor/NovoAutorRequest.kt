@@ -1,7 +1,6 @@
 package autor
 
 import io.micronaut.core.annotation.Introspected
-import io.micronaut.http.HttpResponse
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.Size
